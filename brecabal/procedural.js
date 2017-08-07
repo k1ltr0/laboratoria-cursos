@@ -1,16 +1,19 @@
 function isPrime(num) {
-  //...
-}
-
-function getPrimes(start, end) {
-  for (var i = 2; i < 20; i++) {
-    var isPrime = true;
-
-    //...
-
-    if (isPrime) {
-      console.log(i);
+    for(var j = 2; j < num; j++) {
+      if (num % j === 0) {
+        return false;
+      }
     }
+    return true;
   }
 
+function getPrimes(start, end) {
+  var arr = [];
+    for (var i = start; i < end; i++) {
+      if (isPrime(i)) {
+        arr.push(i);
+      }
+    }
+    return arr;
 }
+console.log(getPrimes(2,100))

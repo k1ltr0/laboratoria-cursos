@@ -1,10 +1,16 @@
 function isPrime(num) {
-  for (var i = 0; i < num; i++){
-    if (num % i == 0){
-      return false;
+  if (num===1) {
+    return false;
+  } else if (num === 2) {
+    return true;
+  } else {
+    for(var j = 2; j < num; j++) {
+      if (num % j === 0) {
+        return false;
+      }
     }
+    return true;
   }
-  return true;
 }
 
 function getPrimes(start, end) {

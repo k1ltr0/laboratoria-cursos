@@ -1,5 +1,5 @@
 function isPrime(num) {
-  if (num===1) {
+  if (num === 1 && num === 0) {
     return false;
   } else if (num === 2) {
     return true;

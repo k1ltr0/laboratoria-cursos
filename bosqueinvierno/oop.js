@@ -32,11 +32,12 @@ Notes.prototype.toString = function () {
   //return this.data.join('</br>') (si imprimo en consola no me sirve br)
   return this.data.join('\n'); //uno todo lo que esta en el array y no imprimo con saltos de línea por cada nota
 };
-module.exports = Note;
-module.exports = Notes;
+module.exports.Note = Note
+module.exports.Notes = Notes
 
 //Exportar constructores 
 // https://stackoverflow.com/questions/20534702/node-js-use-of-module-exports-as-a-constructor
+// https://dzone.com/articles/how-declare-modules-nodejs
 
 //throw
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/throw

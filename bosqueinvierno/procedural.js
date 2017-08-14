@@ -1,23 +1,19 @@
 function isPrime(num) {
 	for(var j = 2;j < num; j++){
 		if(num%j === 0){
-			isPrime = false;
+			return false;
 		}
 	}
-	return ...
+	return true;
 }
 
 function getPrimes(start, end) {
+	var primes = [];
 	for (var i = start; i < end; i++) {
-		var isPrime = true;
-		var primes = [];
-		
-		   
-		if (isPrime) {
-			console.log(i);
+		if (isPrime(i)) {
+			primes.push(i);
 		}
 	}
 	return primes;
-
 }
 

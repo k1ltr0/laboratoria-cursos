@@ -19,18 +19,25 @@ function Notes() {
 }
 
 Notes.prototype.add = function (note) {
-  //...
-  //this.data.unshift(note)
+  if(note instanceof Note){   //si note es una instancia de Note, 
+    this.data.unshift(note)   //va agregando en pos 0 (this.data) a note
+  } else {
+    throw excepcion; // si no, bota error
+  }
 };
 
 Notes.prototype.toString = function () {
-  //...
+  //...  itera en cada nota
+  // retornar una línea por nota
+  //return this.data.join('</br>') no voy a 
+  return 
 };
 
 //Exportar constructores 
 // https://stackoverflow.com/questions/20534702/node-js-use-of-module-exports-as-a-constructor
 
-
+//throw
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/throw
 
 /*Requisitos
 » Notes.prototype.add debe botar error (throw) si el argumento (note) no es una instancia de Note.

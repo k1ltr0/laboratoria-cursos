@@ -11,7 +11,7 @@ Note.prototype.toString = function () {
   return str;
 };
 
-
+  
 function Notes() {
   this.data = [];
   this.data.sort();
@@ -20,9 +20,9 @@ function Notes() {
 Notes.prototype.add = function (note) {
   //...Acá va el código
   if(note instanceof Note){
-    this.data.unshisft(note);
+    this.data.unshift(note);
   }else{
-    throw exception;
+    throw excepcion;
   }
 };
 
@@ -30,5 +30,6 @@ Notes.prototype.toString = function () {
   //...Acá va el código
   return this.data.join('\n');
 };
-module.exports.Note = Note
-module.exports.Notes = Notes
+module.exports.Note = Note;
+module.exports.Notes = Notes;
+

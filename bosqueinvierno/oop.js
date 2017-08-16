@@ -15,7 +15,7 @@ Note.prototype.toString = function () {
 
 function Notes() {
   this.data = [];
-
+  this.data.sort();
 }
 
 Notes.prototype.add = function (note) {
@@ -30,7 +30,7 @@ Notes.prototype.toString = function () {
   //...  itera en cada nota
   // retornar una línea por nota
   //return this.data.join('</br>') (si imprimo en consola no me sirve br)
-  return this.data.join('\n'); //uno todo lo que esta en el array y no imprimo con saltos de línea por cada nota
+  return this.data.join('\n'); //uno todo lo que esta en el array e imprimo con saltos de línea por cada nota
 };
 module.exports.Note = Note
 module.exports.Notes = Notes

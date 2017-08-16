@@ -11,7 +11,6 @@ Note.prototype.toString = function () {
   return str;
 };
 
-
 function Notes() {
   this.data = [];
   this.data.sort();

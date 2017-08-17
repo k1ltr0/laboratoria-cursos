@@ -1,20 +1,18 @@
 function isPrime(num) {
   for(var j = 2; j <= num/2; j++){
     if(num % j == 0){
-      isPrime = false;
+      return false;
     }
   }
+  return true;
 }
 
 function getPrimes(start, end) {
+  var arr = [];
   for (var i = start; i < end; i++) {
-    var isPrime = true;
-    var arreglo = [];
-    
-
-    if (isPrime) {
-      arreglo.push([i]);
+    if (isPrime(i)) {
+      arr.push([i]);
     }
   }
-  return arreglo;
+  return arr;
 }

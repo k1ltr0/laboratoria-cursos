@@ -9,7 +9,6 @@ const book ={
 //console.log(JSON.stringify(book,null,2))
 //console.log(book.toString())
 //console.log(book)
-
 function createBook(){
 	return{
 		'title':'Libro 1',

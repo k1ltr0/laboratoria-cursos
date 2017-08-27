@@ -96,7 +96,20 @@ const b5 = Object.assign(b4, {
 	title: 'Libro 5',
 	toString: function () { return this.title}
 })
-console.log(b5)
-console.log(Object.keys(b5))  //keys retorna las llaves del objeto en forma de arreglo ej [ 'title', 'toString' ]
+//console.log(b5)
+//console.log(Object.keys(b5))  //keys retorna las llaves del objeto en forma de arreglo ej [ 'title', 'toString' ]
 
+
+//Versión con Promesas (código incompleto, pedir a Rodrigo)
+const createBookWithTimeout == (author, title, publish_at) => new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve(`${author} - ${title}`)
+	}, publish_at)
+})
+
+console.log('Create Book')
+createBookWithTimeout('Rodrigo', 'Javascript in time', 5000)
+.then((result => {
+
+})
 
